@@ -29,7 +29,7 @@ simpleContract.new(4, {from:web3.eth.accounts[0], data: simpleStorageByteCode, g
             console.log('var storage2Address = "' + simpleStorage2.address + '"');
 
             var managerContract = web3.eth.contract(managerAbi);
-            managerContract.new(simpleStorage1.address, simpleStorage2.address, {from:web3.eth.accounts[0], data: managerByteCode, gas: 5000000, privateFor: [node4pubkey, node7pubkey]}, function(e, manager) {
+            managerContract.new(simpleStorage1.address, simpleStorage2.address, {from:web3.eth.accounts[0], data: managerByteCode, gas: 5000000}, function(e, manager) {
               if (e) {
                 console.log("err creating contract", e);
               } else {
