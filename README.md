@@ -11,7 +11,7 @@ Ref
 1. Open 3 terminal windows
   1. Window 1
     1. `yarn truffle console --network quorum1`
-    1. `migrate` (in truffle console)
+    1. `migrate --reset` (in truffle console)
     1. `SimpleStorage.deployed().then(function(instance) { return instance.get(); })` (in truffle console)
   1. Window 2
     1. `yarn truffle console --network quorum4`

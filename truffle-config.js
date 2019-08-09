@@ -24,5 +24,10 @@ module.exports = {
       gas: 4500000,
       type: "quorum"
     }
-  }
+  },
+  compilers: {
+    solc: {
+      version: "0.5.1",
+    },
+  },
 };
