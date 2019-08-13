@@ -10,6 +10,7 @@ var managerByteCode = "0x608060405234801561001057600080fd5b506040516040806105e08
 var node4pubkey = "oNspPPgszVUFw0qmGFfWwh1uxVUXgvBxleXORHj07g8=";
 var node7pubkey = "ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc=";
 
+var simpleContract = web3.eth.contract(simpleStorageAbi);
 simpleContract.new(4, {from:web3.eth.accounts[0], data: simpleStorageByteCode, gas: 5000000, privateFor: [node4pubkey]}, function(e, simpleStorage1) {
     if (e) {
     console.log("err creating contract", e);
