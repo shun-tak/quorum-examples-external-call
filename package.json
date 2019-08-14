@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "truffle": "5.0.14"
+    "truffle": "5.0.31",
+    "web3": "1.2.1"
   }
 }

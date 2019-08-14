@@ -10,12 +10,9 @@ Ref
 1. `yarn`
 1. Open 3 terminal windows
     1. Window 1
-        1. `yarn truffle console --network quorum1`
-        1. `migrate --reset` (in truffle console)
-        1. `SimpleStorage.deployed().then(function(instance) { return instance.get(); })` (in truffle console)
+        1. `yarn truffle migrate --network quorum1 --reset`
+        1. `yarn truffle exec scripts/Manager.js --network quorum1` (this returns 4 & 7)
     1. Window 2
-        1. `yarn truffle console --network quorum4`
-        1. `SimpleStorage.deployed().then(function(instance) { return instance.get(); })` (in truffle console)
+        1. `yarn truffle exec scripts/Manager.js --network quorum4` (this returns 4 & 0)
     1. Window 3
-        1. `yarn truffle console --network quorum7`
-        1. `SimpleStorage.deployed().then(function(instance) { return instance.get(); })` (in truffle console)
+        1. `yarn truffle exec scripts/Manager.js --network quorum7` (this returns 0 & 7)
